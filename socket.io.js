@@ -2395,7 +2395,7 @@ Transport.prototype.onClose = function () {
  * Module dependencies
  */
 
-var XMLHttpRequest = _dereq_('xmlhttprequest');
+var XMLHttpRequest = _dereq_('xmlhttprequest-ssl');
 var XHR = _dereq_('./polling-xhr');
 var JSONP = _dereq_('./polling-jsonp');
 var websocket = _dereq_('./websocket');
@@ -2446,7 +2446,7 @@ function polling(opts){
 }
 
 }).call(this,typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"./polling-jsonp":16,"./polling-xhr":17,"./websocket":19,"xmlhttprequest":20}],16:[function(_dereq_,module,exports){
+},{"./polling-jsonp":16,"./polling-xhr":17,"./websocket":19,"xmlhttprequest-ssl":20}],16:[function(_dereq_,module,exports){
 (function (global){
 
 /**
@@ -2689,7 +2689,7 @@ JSONPPolling.prototype.doWrite = function (data, fn) {
  * Module requirements.
  */
 
-var XMLHttpRequest = _dereq_('xmlhttprequest');
+var XMLHttpRequest = _dereq_('xmlhttprequest-ssl');
 var Polling = _dereq_('./polling');
 var Emitter = _dereq_('component-emitter');
 var inherit = _dereq_('component-inherit');
@@ -3071,7 +3071,7 @@ function unloadHandler() {
 }
 
 }).call(this,typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"./polling":18,"component-emitter":21,"component-inherit":22,"debug":23,"xmlhttprequest":20}],18:[function(_dereq_,module,exports){
+},{"./polling":18,"component-emitter":21,"component-inherit":22,"debug":23,"xmlhttprequest-ssl":20}],18:[function(_dereq_,module,exports){
 /**
  * Module dependencies.
  */
@@ -3093,7 +3093,7 @@ module.exports = Polling;
  */
 
 var hasXHR2 = (function() {
-  var XMLHttpRequest = _dereq_('xmlhttprequest');
+  var XMLHttpRequest = _dereq_('xmlhttprequest-ssl');
   var xhr = new XMLHttpRequest({ xdomain: false });
   return null != xhr.responseType;
 })();
@@ -3318,7 +3318,7 @@ Polling.prototype.uri = function(){
   return schema + '://' + this.hostname + port + this.path + query;
 };
 
-},{"../transport":14,"component-inherit":22,"debug":23,"engine.io-parser":26,"parseqs":39,"xmlhttprequest":20}],19:[function(_dereq_,module,exports){
+},{"../transport":14,"component-inherit":22,"debug":23,"engine.io-parser":26,"parseqs":39,"xmlhttprequest-ssl":20}],19:[function(_dereq_,module,exports){
 /**
  * Module dependencies.
  */
